@@ -102,8 +102,8 @@ function turns on a specific (previously disabled) infinite loader with the give
 ### How to reload an infinite loader?
 
 The [`infinite-loader.api/reload!`](documentation/cljs/infinite-loader/API.md#reload)
-function reloads a specific infinite loader with the given ID. If the loader is in
-the viewport reloading it fires the `:on-intersect` function again.
+function reloads a specific infinite loader with the given ID. If the loader was in
+the viewport, reloading it fires the `:on-intersect` function again.
 
 ```
 (defn my-component []
@@ -129,7 +129,7 @@ In the following example an infinite list of numbers rendered.
 
 
 
-; The output of this component looks like this:
+; The output of the number-list component looks like:
 ; [:<> [:div 0]
 ;      [:div 1]
 ;      [:div 2] ...]
