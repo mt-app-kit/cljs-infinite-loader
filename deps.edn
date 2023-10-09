@@ -1,10 +1,10 @@
 
 {:paths ["source-code/cljs"]
  :deps  {bithandshake/cljc-fruits                {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                                  :sha     "7a046c72671e77cfb16c46fb0c10f59258ee0149"}
+                                                  :sha     "55850e2e4c0b5c930d48d82095bf03984a074017"}
          bithandshake/cljc-time                  {:git/url "https://github.com/bithandshake/cljc-time"
-                                                  :sha     "7a046c72671e77cfb16c46fb0c10f59258ee0149"}
+                                                  :sha     "55850e2e4c0b5c930d48d82095bf03984a074017"}
          bithandshake/cljs-intersection-observer {:git/url "https://github.com/bithandshake/cljs-intersection-observer"
-                                                  :sha     "7a046c72671e77cfb16c46fb0c10f59258ee0149"}
+                                                  :sha     "55850e2e4c0b5c930d48d82095bf03984a074017"}
          bithandshake/reagent-api                {:git/url "https://github.com/bithandshake/reagent-api"
-                                                  :sha     "7a046c72671e77cfb16c46fb0c10f59258ee0149"}}}
+                                                  :sha     "55850e2e4c0b5c930d48d82095bf03984a074017"}}}
