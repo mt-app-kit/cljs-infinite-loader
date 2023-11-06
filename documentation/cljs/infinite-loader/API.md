@@ -1,5 +1,9 @@
 
-# infinite-loader.api ClojureScript namespace
+### infinite-loader.api
+
+Functional documentation of the infinite-loader.api ClojureScript namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > infinite-loader.api
 
@@ -14,6 +18,8 @@
 - [reload!](#reload)
 
 - [sensor](#sensor)
+
+---
 
 ### disable!
 
@@ -216,5 +222,5 @@
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 
