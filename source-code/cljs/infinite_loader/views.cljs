@@ -6,7 +6,7 @@
               [infinite-loader.state     :as state]
               [intersection-observer.api :as intersection-observer]
               [random.api                :as random]
-              [reagent.api               :as reagent]))
+              [reagent.core              :as reagent]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -38,7 +38,7 @@
          callback-f (fn [%] (swap! state/OBSERVERS assoc-in [loader-id :intersect?] %)
                             (if % (if on-intersect (on-intersect))
                                   (if on-leave     (on-leave))))]
-        (reagent/lifecycles {:component-did-mount    (fn [] (intersection-observer/setup-observer!  element-id callback-f))
-                             :component-will-unmount (fn [] (intersection-observer/remove-observer! element-id)
-                                                            (swap! state/OBSERVERS dissoc loader-id))
-                             :reagent-render         (fn [] [infinite-loader loader-id])}))))
+        (reagent/create-class {:component-did-mount    (fn [] (intersection-observer/setup-observer!  element-id callback-f))
+                               :component-will-unmount (fn [] (intersection-observer/remove-observer! element-id)
+                                                              (swap! state/OBSERVERS dissoc loader-id))
+                               :reagent-render         (fn [] [infinite-loader loader-id])}))))

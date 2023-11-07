@@ -200,10 +200,10 @@ Functional documentation of the infinite-loader.api ClojureScript namespace
          callback-f (fn [%] (swap! state/OBSERVERS assoc-in [loader-id :intersect?] %)
                             (if % (if on-intersect (on-intersect))
                                   (if on-leave     (on-leave))))]
-        (reagent/lifecycles {:component-did-mount    (fn [] (intersection-observer/setup-observer!  element-id callback-f))
-                             :component-will-unmount (fn [] (intersection-observer/remove-observer! element-id)
-                                                            (swap! state/OBSERVERS dissoc loader-id))
-                             :reagent-render         (fn [] [infinite-loader loader-id])}))))
+        (reagent/create-class {:component-did-mount    (fn [] (intersection-observer/setup-observer!  element-id callback-f))
+                               :component-will-unmount (fn [] (intersection-observer/remove-observer! element-id)
+                                                              (swap! state/OBSERVERS dissoc loader-id))
+                               :reagent-render         (fn [] [infinite-loader loader-id])}))))
 ```
 
 </details>

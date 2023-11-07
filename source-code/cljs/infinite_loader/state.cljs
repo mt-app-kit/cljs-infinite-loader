@@ -1,6 +1,6 @@
 
 (ns infinite-loader.state
-    (:require [reagent.api :refer [ratom]]))
+    (:require [reagent.core :refer [atom] :rename {atom ratom}]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
