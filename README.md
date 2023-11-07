@@ -26,6 +26,9 @@ You can track the changes of the <strong>cljs-infinite-loader</strong> library [
 
 # Usage
 
+> Some parameters of the following functions and some further functions are not discussed in this file.
+  To learn more about the available functionality, check out the [functional documentation](documentation/COVER.md)!
+
 ### Index
 
 - [How to use the infinite loader sensor?](#how-to-use-the-infinite-loader-sensor)
