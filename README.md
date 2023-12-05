@@ -7,7 +7,7 @@ The <strong>cljs-infinite-loader</strong> is a simple ClojureScript infinite loa
 
 > UI components in this library are Reagent components. For more information, check out
   the [Reagent Project](https://github.com/reagent-project/reagent).
-  
+
 ### deps.edn
 
 ```
@@ -142,8 +142,8 @@ In the following example an infinite list of numbers rendered.
 ;
 (defn number-list
   []
-  (letfn [(f [list number] (conj list [:div number]))]
-         (reduce f [:<>] (range 0 @RENDERED-NUMBER-COUNT))))
+  (letfn [(f0 [list number] (conj list [:div number]))]
+         (reduce f0 [:<>] (range 0 @RENDERED-NUMBER-COUNT))))
 
 
 
@@ -152,7 +152,7 @@ In the following example an infinite list of numbers rendered.
 ;
 ; When the number list first rendered there are not enough numbers in it
 ; to fill the viewport and displace the sensor out of it.
-; Therefore the 'on-intersect-f' function sets a timeout for 50ms with
+; Therefore, the 'on-intersect-f' function sets a timeout for 50ms with
 ; the 'autocheck-f' function which reloads the infinite loader if the sensor
 ; is still in the viewport after the rendered number count increased and this
 ; little hack reloads it repeatedly until the viewport getting filled with numbers.
