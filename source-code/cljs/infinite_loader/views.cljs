@@ -2,8 +2,8 @@
 (ns infinite-loader.views
     (:require [hiccup.api                :as hiccup]
               [infinite-loader.env       :as env]
-              [infinite-loader.utils     :as utils]
               [infinite-loader.state     :as state]
+              [infinite-loader.utils     :as utils]
               [intersection-observer.api :as intersection-observer]
               [random.api                :as random]
               [reagent.core              :as reagent]))
