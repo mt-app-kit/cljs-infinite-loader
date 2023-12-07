@@ -7,13 +7,13 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; infinite-loader.env
+; @redirect (infinite-loader.env)
 (def intersect? env/intersect?)
 
-; infinite-loader.side-effects
+; @redirect (infinite-loader.side-effects)
 (def enable!  side-effects/enable!)
 (def disable! side-effects/disable!)
 (def reload!  side-effects/reload!)
 
-; infinite-loader.views
+; @redirect (infinite-loader.views)
 (def sensor views/sensor)

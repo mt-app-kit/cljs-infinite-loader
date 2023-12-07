@@ -33,7 +33,7 @@
   [loader-id]
   ; Placing the observer out of the viewport then restoring its position triggers the callback function.
   ;
-  ; If the observer placed out of the viewport for a too short while (e.g. 5ms),
+  ; If the observer placed out of the viewport for a too short while (e.g., 5ms),
   ; the callback function couldn't be triggered.
   (letfn [(enable-f  [] (enable!  loader-id))
           (disable-f [] (disable! loader-id))]
