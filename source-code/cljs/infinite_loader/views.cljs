@@ -1,11 +1,11 @@
 
 (ns infinite-loader.views
-    (:require [hiccup.api                :as hiccup]
+    (:require [fruits.hiccup.api         :as hiccup]
+              [fruits.random.api         :as random]
               [infinite-loader.env       :as env]
               [infinite-loader.state     :as state]
               [infinite-loader.utils     :as utils]
               [intersection-observer.api :as intersection-observer]
-              [random.api                :as random]
               [reagent.core              :as reagent]))
 
 ;; ----------------------------------------------------------------------------
