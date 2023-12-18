@@ -12,7 +12,7 @@ The <strong>cljs-infinite-loader</strong> is a simple ClojureScript infinite loa
 
 ```
 {:deps {bithandshake/cljs-infinite-loader {:git/url "https://github.com/bithandshake/cljs-infinite-loader"
-                                           :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+                                           :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
