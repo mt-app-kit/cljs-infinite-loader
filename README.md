@@ -5,7 +5,7 @@
 
 The <strong>cljs-infinite-loader</strong> is a simple ClojureScript infinite loader.
 
-> UI components in this library are Reagent components. Check out the [Reagent Project](https://github.com/reagent-project/reagent).
+> UI components in this library are [Reagent](https://github.com/reagent-project/reagent) components.
 
 ### deps.edn
 
@@ -62,7 +62,7 @@ function or the `:on-intersect` function when the sensor passes the viewport bou
 The [`infinite-loader.api/intersecting?`](documentation/cljs/infinite-loader/API.md#intersecting)
 function returns TRUE if a sensor with the given ID intersecting the viewport.
 
-To check whether a sensor is intersecting you have to pass an ID to the sensor.
+To check whether a sensor is intersecting you must provide an ID to the sensor.
 
 ```
 (defn my-component []
