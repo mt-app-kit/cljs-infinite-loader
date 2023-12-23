@@ -3,7 +3,7 @@
 
 ### Overview
 
-The <strong>cljs-infinite-loader</strong> is a simple ClojureScript infinite loader.
+The <strong>cljs-infinite-loader</strong> is a simple infinite loader component (Reagent) for Clojure projects.
 
 > UI components in this library are [Reagent](https://github.com/reagent-project/reagent) components.
 
