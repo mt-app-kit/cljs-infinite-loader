@@ -7,7 +7,7 @@
 
 (defn loader-enabled?
   ; @description
-  ; Returns TRUE if the loader is enabled.
+  ; Returns TRUE if the loader (identified by the given loader ID) is enabled.
   ;
   ; @param (keyword) loader-id
   ;
@@ -22,7 +22,7 @@
 
 (defn loader-disabled?
   ; @description
-  ; Returns TRUE if the loader is disabled.
+  ; Returns TRUE if the loader (identified by the given loader ID) is disabled.
   ;
   ; @param (keyword) loader-id
   ;
@@ -35,11 +35,14 @@
   [loader-id]
   (get-in @state/LOADERS [loader-id :disabled?]))
 
-(defn loader-intersect?
+(defn loader-intersects?
+  ; @description
+  ; Returns TRUE if the loader (identified by the given loader ID) intersects the viewport.
+  ;
   ; @param (keyword) loader-id
   ;
   ; @usage
-  ; (loader-intersect? :my-loader)
+  ; (loader-intersects? :my-loader)
   ; =>
   ; true
   ;

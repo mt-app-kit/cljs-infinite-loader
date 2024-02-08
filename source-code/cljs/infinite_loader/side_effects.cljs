@@ -8,7 +8,7 @@
 
 (defn enable-loader!
   ; @description
-  ; Re-enables the infinite loader (if disabled).
+  ; Re-enables the loader (identified by the given loader ID).
   ;
   ; @param (keyword) loader-id
   ;
@@ -19,7 +19,7 @@
 
 (defn disable-loader!
   ; @description
-  ; Disables the infinite loader.
+  ; Disables the loader (identified by the given loader ID).
   ;
   ; @param (keyword) loader-id
   ;
@@ -33,7 +33,8 @@
 
 (defn reload-loader!
   ; @description
-  ; Reloads the loader and triggers the ':on-enter-f' or ':on-leave-f' function, depending on the sensor position.
+  ; Reloads the loader (identified by the given loader ID), and triggers the ':on-enter-f'
+  ; or ':on-leave-f' function, depending on the sensor position.
   ;
   ; @param (keyword) loader-id
   ;

@@ -8,9 +8,9 @@
 ;; ----------------------------------------------------------------------------
 
 ; @redirect (infinite-loader.env/*)
-(def loader-enabled?   env/loader-enabled?)
-(def loader-disabled?  env/loader-disabled?)
-(def loader-intersect? env/loader-intersect?)
+(def loader-enabled?    env/loader-enabled?)
+(def loader-disabled?   env/loader-disabled?)
+(def loader-intersects? env/loader-intersects?)
 
 ; @redirect (infinite-loader.side-effects/*)
 (def enable-loader!  side-effects/enable-loader!)
