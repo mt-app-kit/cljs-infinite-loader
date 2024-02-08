@@ -7,5 +7,8 @@
 
 ; @ignore
 ;
-; @constant (map)
-(def OBSERVERS (ratom {}))
+; @atom (map)
+; {:my-loader (map)
+;   {:disabled? (boolean)
+;    :intersect? (boolean)}}
+(def LOADERS (ratom {}))

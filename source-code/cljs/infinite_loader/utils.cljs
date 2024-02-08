@@ -1,20 +1,26 @@
 
 (ns infinite-loader.utils
-    (:require [fruits.keyword.api :as keyword]))
+    (:require [infinite-loader.state :as state]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn loader-id->observer-id
+(defn sensor-intersect-f
   ; @ignore
   ;
   ; @param (keyword) loader-id
+  ; @param (map) loader-props
+  ; {:on-enter-f (function)(opt)
+  ;  :on-leave-f (function)(opt)}
   ;
-  ; @example
-  ; (loader-id->observer-id :my-loader)
+  ; @usage
+  ; (sensor-intersect-f :my-loader {...})
   ; =>
-  ; :my-loader--observer
+  ; (fn [intersect?] ...)
   ;
-  ; @return (keyword)
-  [loader-id]
-  (keyword/append loader-id :observer "--"))
+  ; @return (function)
+  [loader-id {:keys [on-enter-f on-leave-f]}]
+  (fn [intersect?]
+      (swap! state/LOADERS assoc-in [loader-id :intersect?] intersect?)
+      (if intersect? (if on-enter-f (on-enter-f loader-id))
+                     (if on-leave-f (on-leave-f loader-id)))))

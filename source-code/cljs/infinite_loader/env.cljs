@@ -5,24 +5,44 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn observer-disabled?
-  ; @ignore
+(defn loader-enabled?
+  ; @description
+  ; Returns TRUE if the loader is enabled.
   ;
-  ; @param (keyword) loader-id
-  ;
-  ; @return (boolean)
-  [loader-id]
-  (get-in @state/OBSERVERS [loader-id :disabled?]))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn intersect?
   ; @param (keyword) loader-id
   ;
   ; @usage
-  ; (intersect? :my-loader)
+  ; (loader-enabled? :my-loader)
+  ; =>
+  ; true
   ;
   ; @return (boolean)
   [loader-id]
-  (get-in @state/OBSERVERS [loader-id :intersect?]))
+  (-> (get-in @state/LOADERS [loader-id :disabled?]) not))
+
+(defn loader-disabled?
+  ; @description
+  ; Returns TRUE if the loader is disabled.
+  ;
+  ; @param (keyword) loader-id
+  ;
+  ; @usage
+  ; (loader-disabled? :my-loader)
+  ; =>
+  ; true
+  ;
+  ; @return (boolean)
+  [loader-id]
+  (get-in @state/LOADERS [loader-id :disabled?]))
+
+(defn loader-intersect?
+  ; @param (keyword) loader-id
+  ;
+  ; @usage
+  ; (loader-intersect? :my-loader)
+  ; =>
+  ; true
+  ;
+  ; @return (boolean)
+  [loader-id]
+  (get-in @state/LOADERS [loader-id :intersect?]))

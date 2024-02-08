@@ -6,36 +6,43 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn enable!
+(defn enable-loader!
+  ; @description
+  ; Re-enables the infinite loader (if disabled).
+  ;
   ; @param (keyword) loader-id
   ;
   ; @usage
-  ; (enable! :my-loader)
+  ; (enable-loader! :my-loader)
   [loader-id]
-  (swap! state/OBSERVERS assoc-in [loader-id :disabled?] false))
+  (swap! state/LOADERS assoc-in [loader-id :disabled?] false))
 
-(defn disable!
+(defn disable-loader!
+  ; @description
+  ; Disables the infinite loader.
+  ;
   ; @param (keyword) loader-id
   ;
   ; @usage
-  ; (disable! :my-loader)
+  ; (disable-loader! :my-loader)
   [loader-id]
-  (swap! state/OBSERVERS assoc-in [loader-id :disabled?] true))
+  (swap! state/LOADERS assoc-in [loader-id :disabled?] true))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn reload!
+(defn reload-loader!
+  ; @description
+  ; Reloads the loader and triggers the ':on-enter-f' or ':on-leave-f' function, depending on the sensor position.
+  ;
   ; @param (keyword) loader-id
   ;
   ; @usage
-  ; (reload! :my-loader)
+  ; (reload-loader! :my-loader)
   [loader-id]
-  ; Placing the observer out of the viewport then restoring its position triggers the callback function.
-  ;
-  ; If the observer placed out of the viewport for a too short while (e.g., 5ms),
-  ; the callback function couldn't be triggered.
-  (letfn [(enable-f  [] (enable!  loader-id))
-          (disable-f [] (disable! loader-id))]
+  ; - Placing the observer outside of the viewport, then restoring its position triggers the callback function.
+  ; - If the observer placed outside of the viewport for a too short while (e.g., 5ms), the callback function wouldn't fire.
+  (letfn [(enable-f  [] (enable-loader!  loader-id))
+          (disable-f [] (disable-loader! loader-id))]
          (disable-f)
          (time/set-timeout! enable-f 50)))
