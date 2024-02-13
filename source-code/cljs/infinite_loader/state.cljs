@@ -1,6 +1,6 @@
 
 (ns infinite-loader.state
-    (:require [reagent.core :refer [atom] :rename {atom ratom}]))
+    (:require [reagent.core :as reagent]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -11,4 +11,4 @@
 ; {:my-loader (map)
 ;   {:disabled? (boolean)
 ;    :intersect? (boolean)}}
-(def LOADERS (ratom {}))
+(def LOADERS (reagent/atom {}))
