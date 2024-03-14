@@ -1,10 +1,10 @@
 
 {:paths ["source-code/cljs"]
  :deps  {bithandshake/cljc-fruits              {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                                :sha     "b15883ff37b665376c36dd7cd6c614e088cdfd54"}
+                                                :sha     "ebb141f2baeaf6c24c4fe7842079b1b6bc7c9e69"}
          bithandshake/cljc-time                {:git/url "https://github.com/bithandshake/cljc-time"
-                                                :sha     "b15883ff37b665376c36dd7cd6c614e088cdfd54"}
+                                                :sha     "ebb141f2baeaf6c24c4fe7842079b1b6bc7c9e69"}
          mt-app-kit/cljs-intersection-observer {:git/url "https://github.com/mt-app-kit/cljs-intersection-observer"
-                                                :sha     "b15883ff37b665376c36dd7cd6c614e088cdfd54"}
+                                                :sha     "ebb141f2baeaf6c24c4fe7842079b1b6bc7c9e69"}
          org.clojure/clojurescript             {:mvn/version "1.10.891"}
          reagent/reagent                       {:mvn/version "1.2.0"}}}

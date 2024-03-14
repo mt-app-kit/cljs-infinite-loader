@@ -16,10 +16,10 @@ The <strong>cljs-infinite-loader</strong> is a simple infinite loader component 
 
 Check out the latest commit on the [release branch](https://github.com/mt-app-kit/cljs-infinite-loader/tree/release).
 
-### Documentation
-
-The <strong>cljs-infinite-loader</strong> functional documentation is [available here](https://mt-app-kit.github.io/cljs-infinite-loader).
-
 ### Changelog
 
 You can track the changes of the <strong>cljs-infinite-loader</strong> library [here](CHANGES.md).
+
+# Documentation
+
+The <strong>cljs-infinite-loader</strong> functional documentation is [available here](https://mt-app-kit.github.io/cljs-infinite-loader).
